@@ -1,18 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link  rel="stylesheet" href="./style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="my-div">
-        <h1 class="my-title">
-            Hello my dear friend!!!!!!!!!!!!!!
-        </h1>
+      <main class="card">
+        <h1 class="my-title">Password Generator</h1>
+
+        <label class="field">
+          <span>Length: <strong id="length-value">12</strong></span>
+          <input id="length" type="range" min="4" max="32" value="12" />
+        </label>
+
+        <label class="option">
+          <input id="uppercase" type="checkbox" checked />
+          <span>Include uppercase letters</span>
+        </label>
+
+        <label class="option">
+          <input id="numbers" type="checkbox" checked />
+          <span>Include numbers</span>
+        </label>
+
+        <label class="option">
+          <input id="symbols" type="checkbox" checked />
+          <span>Include symbols</span>
+        </label>
+
+        <div class="result-row">
+          <input id="password" type="text" readonly />
+          <button id="copy-btn" type="button">Copy</button>
+        </div>
+
+        <button id="generate-btn" class="generate-btn" type="button">
+          Generate password
+        </button>
+      </main>
     </div>
-    
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
